@@ -73,11 +73,11 @@ class Biblioteca:
                       f'\tDinheiro em caixa: R$ {self.dinheiroEmCaixa}\n'
                       f'\tValor da compra dos livros: R$ {valor * quantidade}\n')
             else:
-                tipo = int(input( "TIPOS DOS LIVROS\n"
-                                  "\t1 - Comedia\n"
-                                  "\t2 - Drama\n"
-                                  "\t3 - Aventura\n"
-                                  "Tipo do livro: "))
+                tipo = int(input("TIPOS DOS LIVROS\n"
+                                 "\t1 - Comedia\n"
+                                 "\t2 - Drama\n"
+                                 "\t3 - Aventura\n"
+                                 "Tipo do livro: "))
                 if tipo == 1:
                     self.estoque[self.id] = Comedia(self.id, nome, valor, quantidade)
                     self.id += 1
