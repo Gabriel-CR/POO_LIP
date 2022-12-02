@@ -48,7 +48,7 @@ class Biblioteca:
         op = int(input("\t1 - Comprar mais unidades de livro já em estoque\n\t2 - Comprar novo livro\n\tSua escolha: "))
 
         if op == 1:
-            idLivro = int(input("\nId do livro a sem comprado: "))
+            idLivro = int(input("\nId do livro a ser comprado: "))
 
             if idLivro not in self.estoque:
                 print(f'\nLivro com id {idLivro} não encontrado, tente a 2ª opção para cadastrar um novo livro\n')
@@ -62,7 +62,7 @@ class Biblioteca:
                 else:
                     self.estoque[idLivro].setQuantidade(self.estoque[idLivro].getQuantidade() + quantidade)
                     self.dinheiroEmCaixa -= self.estoque[idLivro].getValor() * quantidade
-                    print(f'\nCompra de {quantidade} unidades do livro {self.estoque[idLivro].getNome()} efetuada com sucesso\n')
+                    print(f'\nCompra de {quantidade} unidade(s) do livro {self.estoque[idLivro].getNome()} efetuada com sucesso\n')
         elif op == 2:
             nome = str(input("\nNome do livro: "))
             valor = float(input("Valor do livro: "))
