@@ -1,11 +1,11 @@
-from biblioteca import Biblioteca
+from livraria import Livraria
 
 
 def menu():
-    biblioteca = Biblioteca()
-    print("BEM VINDO AO SISTEMA DA BIBLIOTECA")
+    livraria = Livraria()
+    print("BEM VINDO AO SISTEMA DA LIVRARIA")
     dinheiro = float(input("Digite a quantidade inicial de dinheiro em caixa: "))
-    biblioteca.setDinheiroEmCaixa(dinheiro)
+    livraria.setDinheiroEmCaixa(dinheiro)
 
     opcoes = "1 - Consultar estoque de livros\n" \
              "2 - Dinheiro em caixa\n" \
@@ -21,15 +21,15 @@ def menu():
         if op == 6:
             break
         elif op == 1:
-            biblioteca.consultarEstoque()
+            livraria.consultarEstoque()
         elif op == 2:
-            biblioteca.getDinheiroEmCaixa()
+            livraria.getDinheiroEmCaixa()
         elif op == 3:
-            biblioteca.efetuarVenda()
+            livraria.efetuarVenda()
         elif op == 4:
-            biblioteca.efetuarCompra()
+            livraria.efetuarCompra()
         elif op == 5:
-            biblioteca.consultarVendas()
+            livraria.consultarVendas()
         else:
             print("\nOpção inválida\n")
 

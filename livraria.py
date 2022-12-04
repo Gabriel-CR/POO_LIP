@@ -1,11 +1,10 @@
-from livro import Livro
 from venda import Venda
 from comedia import Comedia
 from drama import Drama
 from aventura import Aventura
 
 
-class Biblioteca:
+class Livraria:
     def __init__(self):
         self.estoque = {}
         self.venda = []
@@ -20,7 +19,7 @@ class Biblioteca:
         print(f'\nHá R$ {self.dinheiroEmCaixa} em caixa\n')
 
     def consultarEstoque(self):
-        print(f'\nHá {len(self.estoque)} livro(s) na biblioteca')
+        print(f'\nHá {len(self.estoque)} livro(s) na livraria')
         for livro in self.estoque.values():
             print(f'\t{livro}')
         print()
@@ -54,7 +53,6 @@ class Biblioteca:
                 print(f'\nLivro com id {idLivro} não encontrado, tente a 2ª opção para cadastrar um novo livro\n')
             else:
                 quantidade = int(input("Quantidades a serem compradas: "))
-                print(self.estoque[idLivro].getValor() * quantidade)
                 if self.estoque[idLivro].getValor() * quantidade > self.dinheiroEmCaixa:
                     print(f'\nDinheiro induficiente para realizar compra\n'
                           f'\tDinheiro em caixa: R$ {self.dinheiroEmCaixa}\n'
